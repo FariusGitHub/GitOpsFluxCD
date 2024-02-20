@@ -525,3 +525,16 @@ Continuous Deployment with Flux involves the following steps:
 4. The changes are automatically deployed to the cluster, ensuring that the applications are always running the latest version of the code.
 
 By using Flux source and Flux kustomization, teams can automate the deployment process and ensure that changes are deployed quickly and consistently. This helps to reduce the risk of errors and allows teams to focus on developing new features and improving their applications.
+
+Regarding my blog earlier for [GitHub Webhook](https://github.com/FariusGitHub/Example_Webpage), we might wonder how to differentiate WebHook and FluxCD.
+GitHub Webhooks are typically used to trigger Jenkins jobs automatically whenever a code change is pushed to a GitHub repository, allowing for continuous integration (CI) to be automated. This covers the CI part of the CI/CD process.
+
+On the other hand, FluxCD can be used to automatically deploy changes from a GitHub repository to a Kubernetes cluster, enabling continuous delivery (CD) to be automated. This covers the CD part of the CI/CD process.
+
+| Feature          | GitHub Webhook                                           | FluxCD                                             |
+|------------------|----------------------------------------------------------|----------------------------------------------------|
+| Triggering       | Triggers Jenkins jobs on code change in GitHub repository| Triggers K8S deployments on changes in GitHub repo |
+| Automation       | Allows for CI/CD automation                              | Automates K8S deployments                          |
+| Integration      | Integrates with Jenkins for CI/CD automation             | Integrates with K8S for deployments                |
+| Flexibility      | Limited to Jenkins jobs                                  | More flexible in handling K8S deployments          |
+| Ease of use      | Easy to set up and configure                             | Requires some learning curve                       |
